@@ -1,0 +1,271 @@
+// =================== BLOG GRID =================== // 
+.about {
+    .journey-sec-wrapper {
+        position: relative;
+        background: $lightest-gray;
+        padding: 80px 32px 0;
+        border-radius: 2.5vw;
+        @include  media-query(1024px){
+            padding: 40px 32px 0;
+        }
+        @include  media-query(490px){
+            padding: 40px 16px 0;
+        }
+        &.restaurant-wrapper{
+            padding: 4.167vw 0;
+            border-radius: 2.5vw 2.5vw 0 0;
+        }
+        .sec-heading {
+            padding-left: 21.406vw;
+            position: relative;
+            z-index: 10;
+            transition: $transition;
+            @include  media-query(2560px){
+                padding-left: 24.406vw;
+            }
+            @include  media-query(1920px){
+                padding-left: 21.406vw;
+            }
+            @include  media-query(1599px){
+                padding-left: 17.406vw;
+            }
+            @include  media-query(1499px){
+                padding-left: 15.406vw;
+            }
+            @include  media-query(1399px){
+                padding-left: 14.406vw;
+            }
+            @include  media-query(1299px){
+                padding-left: 12vw;
+            }
+            @include  media-query(1024px){
+                padding-left: 160px;
+                top: 12px;
+            }
+            @include  media-query(820px){
+                padding-left: 100px;
+                top: 6px;
+            }
+            @include  media-query(490px){
+                padding-left: 82px;
+                top: -35px;
+            }
+        }
+
+        .journey-sec {
+            margin-top: -105px;
+
+            .all-content {
+                display: flex;
+                align-items: center;
+                
+                @include media-query(1024px){
+                    padding-top: 40px;
+                }
+                .image-block {
+                    width: 37.865vw;
+                    height: 36.458vw;
+                    border-radius: 48px 0 48px 48px;
+                    overflow: hidden;
+                    position: relative;
+                    transition: width 1s;
+                    transition-timing-function: cubic-bezier(0, 0.2, 0.2, 1);
+                    @include media-query(1024px){
+                        border-radius: 32px 0 32px 32px;
+                    }
+                    @include media-query(490px){
+                        border-radius: 20px 0 20px 20px;
+                    }
+
+                    .img-cornner {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 423.145px;
+                        height: 171.553px;
+                        object-fit: cover;
+                        object-position: 100%;
+                        @include media-query(1024px){
+                            width: 285.145px;
+                            height: 125.553px;
+                        }
+                        @include media-query(820px){
+                            width: 261.145px;
+                            height: 112.553px;
+                        }
+                        @include media-query(768px){
+                            width: 239.145px;
+                            height: 103.553px;
+                        }
+                        @include media-query(490px){
+                            width: 23vw;
+                            height: 9.297vw;
+                        }
+                    }
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .text-block {
+                    transition: $transition;
+                    opacity: 1;
+                    width: 31.354vw;
+                    margin-left: 9.427vw;
+                    @include media-query(1024px){
+                        width: 42.354vw;
+                    }
+                    @include media-query(1024px){
+                        margin-top: 8.122vw;
+                    }
+                    h4{
+                        @include media-query(1024px){
+                            font-size: 2.3vw;
+                        }
+                        @include media-query(490px){
+                            font-size: 3.3vw;
+                        }
+
+                    }
+                    p{
+                        @include media-query(768px){
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 4;
+                            line-clamp: 4; 
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .style-text {
+            padding: 80px 0 0;
+            @include media-query(490px){
+                padding: 9.796vw 0 9.796vw;
+            }
+            p{
+                @include media-query(490px){
+                    font-size: 3.7vw;
+                }
+            }
+            &.restaurant-text{
+                padding: 4.167vw 0;
+            }
+        }
+
+    }
+}
+
+// Our Story - 1
+
+.story_1 {
+    .story_1-content {
+        background: $lightest-gray;
+        padding: 4.167vw 1.667vw;
+        display: flex;
+        align-items: center;
+        @include media-query(490px){
+            flex-direction: column;
+            
+        }
+        .image-block {
+            width: 36.25vw;
+            height: 46.042vw;
+            overflow: hidden;
+            @include media-query(490px){
+                width: 100%;
+                height: 100%;
+            }
+
+            img {
+                transition: width 1s;
+                transition-timing-function: cubic-bezier(0, 0.2, 0.2, 1);
+                object-fit: cover;
+                width: 0;
+                height: 100%;
+                border-radius: clamp(15px, 1.042vw, 30px);
+                @include media-query(490px){
+                    width: 100%;
+                }
+            }
+        }
+        
+        .text-sec {
+            width: 31.354vw;
+            margin-left: 9.375vw;
+            @include media-query(490px){
+                padding-top: 3.265vw;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+// Our Story - 2
+.story_2 {
+    .story_content-2 {
+        background: $lightest-gray;
+        padding: 4.167vw 1.667vw 4.167vw 14.688vw;
+        display: flex;
+        align-items: center;
+        @include media-query(1024px){
+            padding: 7.813vw 3.125vw 7.813vw 16.602vw;
+        }
+        @include media-query(820px){
+            padding: 9.756vw 3.902vw 9.756vw 15.854vw;
+        }
+        @include media-query(768px){
+            padding: 10.417vw 4.167vw 10.417vw 6.25vw;
+        }
+        @include media-query(490px){
+            flex-direction: column-reverse;
+            // padding: 16.327vw 6.531vw 16.327vw 6.531vw;
+        }
+        
+        .content-box {
+            width: 31.354vw;
+            margin-right: 9.375vw;
+            @include media-query(490px){
+                width: 100%;
+                margin: 0;
+                padding-top: 3.265vw;
+            }
+            h4{
+                @include media-query(490px){
+                    font-size: 4vw;
+                }
+            }
+            p{
+                @include media-query(490px){
+                    font-size: 3vw;
+                }
+            }
+        }
+        .img-box{
+            width: 36.25vw;
+            height: 46.042vw;
+            overflow: hidden;
+            @include media-query(490px){
+                width: 100%;
+                height: 100%;
+            }
+            img {
+                transition: width 1s;
+                transition-timing-function: cubic-bezier(0, 0.2, 0.2, 1);
+                object-fit: cover;
+                width: 0;
+                height: 100%;
+                border-radius: clamp(15px, 1.042vw, 30px);
+                @include media-query(490px){
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.error {
+    .error-wrapper {
+        background: $lightest-gray;
+        border-radius: clamp(20px, 3.125vw, 75px) clamp(20px, 3.125vw, 75px) 0 0;
+
+        .error-404 {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            @include media-query(490px){
+                padding: 46vw 0;
+            }
+            @include media-query(430px){
+                padding: 52vw 0;
+            }
+            @include media-query(399px){
+                padding: 43vw 0;
+            }
+            @include media-query(390px){
+                padding: 51vw 0;
+            }
+        }
+
+        .error-block {
+            width: 49.213vw;
+            height: 41.444vw;
+            display: flex;
+            gap: clamp(16px, 3.333vw, 84px);
+            @include media-query(490px){
+                width: 100%;
+                height: auto;
+            }
+            
+            .img-box {
+                position: relative;
+                text-align: center;
+
+                img {
+                    width: 18.692vw;
+                    height: 33.111vw;
+                    margin-top: 5.625vw;
+                    animation: animateCard 3s linear infinite alternate;
+                    
+                    @include media-query(490px){
+                        width: 30.692vw;
+                        height: 51.111vw;
+                        margin-top: 0;
+                    }
+                }
+
+                .text-box {
+                    animation: animateCard 3s linear infinite alternate;
+                    position: absolute;
+                    bottom: 5.625vw;
+                    left: 3.333vw;
+                    @include media-query(1024px){
+                        bottom: 4.625vw;
+                        left: 1.333vw;
+                    }
+                    @include media-query(490px){
+                        bottom: 2.625vw;
+                    }
+                    .cus-btn{
+                        @include media-query(490px){
+                            padding: 2.449vw 12px;
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+
+            .error-text {
+                font-size: clamp(80px, 20.833vw, 500px);
+                color: $accent-1;
+                font-family: $font-primary;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%;
+                letter-spacing: -8px;
+            }
+        }
+    }
+}
+
+@keyframes animateCard {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(7deg);
+    }
+
+    40% {
+        transform: rotate(14deg);
+    }
+
+    60% {
+        transform: rotate(7deg);
+    }
+
+    80% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-7deg);
+    }
+}

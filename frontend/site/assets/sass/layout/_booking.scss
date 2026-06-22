@@ -1,0 +1,139 @@
+.booking {
+    .booking-wrapper {
+        padding: 4.167vw 1.667vw;
+        background: $lightest-gray;
+        border-radius: 3.125vw 3.125vw 0 0;
+
+        .booking-image {
+            height: 100%;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                border-radius: clamp(10px, 1.042vw, 30px);
+
+                @include media-query(820px) {
+                    display: none;
+                }
+            }
+        }
+
+        .booking-text {
+            h3 {
+                @include media-query(490px) {
+                    font-size: 4vw;
+                }
+            }
+
+            p {
+                @include media-query(490px) {
+                    font-size: 3.2vw;
+                }
+            }
+        }
+
+        .input-date-picker {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            position: relative;
+            font-size: 1.09375vw;
+            font-weight: 500;
+
+            @include media-query(1024px) {
+                font-size: 1.563vw;
+            }
+
+            .date_from {
+                background: url(../media/icon/calender.png) no-repeat 97%;
+                cursor: pointer;
+                background-color: $white;
+
+            }
+
+            .date_to {
+                background: url(../media/icon/calender.png) no-repeat 97%;
+                cursor: pointer;
+                background-color: $white;
+
+            }
+
+            .seat-booking {
+
+                @include media-query(490px) {
+                    font-size: 4vw;
+                }
+            }
+        }
+
+        .nice-select {
+            color: $medium-gray;
+        }
+
+        textarea {
+            max-height: 7.813vw;
+
+            @include media-query(578px) {
+                max-height: 30.813vw;
+            }
+        }
+
+        .form-control {
+            line-height: 163%;
+
+            @include media-query(490px) {
+                line-height: 80%;
+            }
+        }
+
+        // Login Page
+        .password-block {
+            position: relative;
+
+            i {
+                cursor: pointer;
+                color: $light-black;
+                position: absolute;
+                right: 0.833vw;
+                top: 1.146vw;
+                z-index: 10;
+
+                @include media-query(1599px) {
+                    top: 1.5vw;
+                }
+
+                @include media-query(820px) {
+                    top: 2.2vw;
+                    right: 1.5vw;
+                }
+
+                @include media-query(490px) {
+                    top: 3.6vw;
+                    right: 2.8vw;
+                    font-size: 10px;
+                }
+            }
+
+        }
+    }
+}
+
+
+.guest-area {
+    width: 19.688vw;
+    position: absolute;
+    top: 3.75vw;
+    right: -1.25vw;
+    display: none;
+    z-index: 99999;
+
+    @include media-query(1024px) {
+        width: 25.688vw;
+    }
+
+    @include media-query(490px) {
+        width: 46.6vw;
+        top: 13.75vw;
+        right: -10.25vw;
+    }
+}

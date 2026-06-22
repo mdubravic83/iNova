@@ -1,0 +1,50 @@
+.resturent-video{
+    .content{
+        width: 100%;
+        height: 52.708333333333336vw;
+        margin-top: -6.40625vw;
+        position: relative;
+        z-index: 40;
+        border-radius: 3.125vw 0 0 3.125vw;
+        overflow: hidden;
+        outline: 1px solid $white;
+        @include media-query(490px){
+            margin-top: -8.40625vw;
+        }
+
+        .top-cornner{
+            position: absolute;
+            right: -1px;
+            top: -1px;
+            width: 32.552083333333336vw;
+            height: 12.96875vw;
+            @include media-query(490px){
+                width: 47.552083vw;
+                height: 17.6875vw;
+            }
+        }
+        .bottom-cornner{
+            position: absolute;
+            right: -1px;
+            bottom: -1px;
+            width: 74.94791666666667vw;
+            height: 12.96875vw;
+            @include media-query(490px){
+                width: 87.947917vw;
+                height: 19.96875vw;
+                bottom: 0px;
+            }
+        }
+        .bg-video{
+            width: 100%;
+            height: 100%;
+            outline: 1px solid $white;
+
+            video{
+                width: 100%;
+                height: calc(100% - 1px);
+                object-fit: cover;
+            }
+        }
+    }
+}

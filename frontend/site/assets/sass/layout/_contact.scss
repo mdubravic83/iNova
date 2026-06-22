@@ -1,0 +1,78 @@
+
+
+.contact-us{
+    .contact-wrapper{
+        padding: 4.167vw 1.667vw;
+        background: $lightest-gray;
+        border-radius: clamp(15px, 1.667vw, 40px);
+        .contact-info-wrapper {
+            background: url(../media/background/contact-image.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            height: 100%;
+            padding: clamp(16px, 1.25vw, 48px);
+            @include media-query(490px){
+                height: 250px;
+                flex-direction: column;
+            }
+        }
+        .links{
+            display: flex;
+            flex-direction: column;
+            gap: clamp(6px, 1.25vw, 32px);
+            @include media-query(490px){
+                flex-direction: unset;
+            }
+            &.input-links{
+                flex-direction: column;
+            }
+        }
+        .contact-box{
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            padding: 0 clamp(12px, 0.833vw, 32px);
+            background: $white;
+            border: 0.5px solid $medium-gray;
+            border-radius: clamp(5px, 0.521vw, 15px);
+            height: 3.333vw;
+            @include media-query(490px){
+                height: 8.122vw;
+            }
+            span{
+                color: $light-black;
+                transition: $transition;
+            }
+            i{
+                color: $accent-1;
+                font-size: clamp(14px, 1.771vw, 56px);
+            }
+            &:hover{
+                span{
+                    transition: $transition;
+                    color: $accent-1;
+                }
+            }
+            
+        }
+        textarea{
+            max-height: 12.5vw;
+            @include media-query(490px){
+                max-height: 27.755vw;
+            }
+        }
+    }
+}
+
+.map-address{
+    iframe{
+        border-radius: clamp(15px, 1.667vw, 40px);
+        width: 100%;
+        height: 26.042vw;
+    }
+}

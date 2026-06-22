@@ -1,0 +1,181 @@
+/*-------------------------
+  Form Styling
+-------------------------*/
+.form-group {
+  position: relative;
+}
+
+.select-range {
+  position: relative;
+
+  select {
+    option {
+      background: #475055;
+      color: $white;
+      font-size: 22px;
+      font-family: $font-sec;
+      padding: 8px 0;
+
+      &:hover {
+        background: $accent-1;
+      }
+
+      &:first-child {
+        border-radius: 10px 10px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0px 0px 10px 10px;
+      }
+    }
+  }
+
+  &::after {
+    content: "\f0d7";
+    font-family: "Font Awesome 5 Pro";
+    position: absolute;
+    right: 40px;
+    top: 34px;
+    font-weight: 700;
+    font-size: 30px;
+    color: #FFFFFF;
+    transition: $transition;
+  }
+}
+
+textarea.form-control {
+  min-height: 142px;
+  max-height: 120px;
+
+  @media(max-width: 578px) {
+    min-height: 48px;
+    max-height: 48px;
+  }
+
+}
+
+.form-label {
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.32px;
+
+  @media(max-width: 578px) {
+    font-size: 14px;
+  }
+
+  &.bold {
+    font-weight: 700;
+  }
+}
+
+.form-control {
+  padding: clamp(12px, 0.833vw, 24px);
+  border-radius: clamp(5px, 0.521vw, 15px);
+  border: 0.5px solid $medium-gray;
+  background: $white;
+  font-family: $font-primary;
+  font-size: clamp(11px, 0.938vw, 21px);
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.32px;
+  position: relative;
+  color: $light-black;
+  box-shadow: none;
+  &::selection{
+    background-color: $white;
+  }
+
+  &.border {
+    border-color: $accent-1 !important;
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+    color: $light-black !important;
+    background: transparent;
+  }
+
+  &:hover {
+    color: $light-black !important;
+
+  }
+
+  &::placeholder {
+    color: $medium-gray;
+    opacity: 1;
+  }
+}
+
+.form-selector {
+  width: 100%;
+  padding: 16px;
+  border-radius: 10px;
+  border: 0;
+  font-family: $font-primary;
+  font-size: clamp(12px, 0.938vw, 21px);
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.32px;
+  position: relative;
+  color: $light-black;
+  box-shadow: none;
+  background-color: $white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('../media/icon/down-arrow.png') 97% no-repeat $white;
+
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+    border: 0px;
+    color: $light-black;
+  }
+
+  &::placeholder {
+    color: $light-gray;
+    opacity: 1;
+  }
+}
+
+[type="file"] {
+  // padding: 30px 0px 15px 30px;
+  padding-left: 42px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 18px;
+    left: 16px;
+    width: 16px;
+    height: 16px;
+    content: url(../media/vector/attached.png);
+
+  }
+
+  &::-webkit-file-upload-button {
+    // margin-top: -20px;
+    display: none;
+    background: transparent;
+    border: none;
+    border-radius: 0px;
+    color: #817F7E;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    font-family: $font-sec;
+    outline: none;
+    padding: 0;
+    transition: all 1s ease;
+  }
+}
+
+label {
+  &.error {
+    color: #ff0000;
+  }
+}

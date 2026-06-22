@@ -1,0 +1,171 @@
+/*---------------------------------------------"
+// Template Name: Lux Hotel
+// Template URL: https://techpedia.co.uk/template/
+// Description:  Lux Hotel Html Template
+// Version: 1.0.0
+
+===============================================   
+STYLE SHEET INDEXING
+|
+|___ Fonts
+|___ Variables
+|___ Responsive
+|___ Reset Styles
+|___ Spacing
+|___ Helper Classes
+|___ Buttons
+|___ Headings
+|___ Layout Styles
+|___ END STYLE SHEET INDEXING
+
+--------------------------------------------*/
+
+/*-------------------------
+    Fonts
+-------------------------*/
+
+//// inter
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+//// Lato
+@font-face {
+  font-family: "Lato";
+  src: url("./webfonts/lato/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("./webfonts/lato/Lato-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("./webfonts/lato/Lato-Semibold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("./webfonts/lato/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("./webfonts/lato/Lato-Heavy.ttf") format("truetype");
+  font-weight: 800;
+}
+
+/*-------------------------
+    Variables
+-------------------------*/
+/* Fonts */
+$font-primary: "Open Sans", sans-serif;
+$font-sec: "Lato", sans-serif;
+$font-awesome: "Font Awesome 6 Pro";
+
+/* Colors */
+$accent-1: #978667;
+$accent-2: #fd712a;
+$white: #fcfdfd;
+$light-white: #cbcccd;
+$black: #131110;
+$matt-black: #1B1C1E;
+$lightest-black: #0b0b0b;
+$light-black: #282525;
+$medium-black: #1b1918;
+$dark-black: #0d0d0d;
+$light-gray: #f0f0f0;
+$medium-gray: #bdbcbc;
+$lightest-gray: #F1F5F8;
+$dark-gray: #979797;
+
+$error: #ec1919;
+$success: #25ea8b;
+$link: #0484fb;
+
+$gradient: linear-gradient(180deg, rgba(221, 230, 238, 0) 0%, #dde6ee 100%);
+
+/* Transitions */
+$transition: all 0.5s ease-in-out;
+
+/* Shadow */
+$shadow: 0px 0px 54px 0px rgba(255, 255, 255, 0.63);
+
+/*-------------------------
+    Responcive Styles
+-------------------------*/
+@import "helpers/mixin";
+
+/*-------------------------
+    Reset Styles
+-------------------------*/
+@import "basic/basic";
+
+/*-------------------------
+Helpers
+-------------------------*/
+@import "helpers/classes";
+
+@import "helpers/spacing";
+
+/*-------------------------
+Elements
+-------------------------*/
+
+@import "elements/buttons";
+
+@import "elements/form";
+
+@import "elements/heading";
+
+@import "elements/modal";
+
+@import "elements/preloader";
+
+/*-------------------------
+  layouts
+-------------------------*/
+@import "layout/header";
+
+@import "layout/footer";
+
+@import "layout/banner";
+
+@import "layout/rooms";
+
+@import "layout/room-detail";
+
+@import "layout/video";
+
+@import "layout/activities";
+
+@import "layout/amenitieSlider";
+
+@import "layout/testimonial";
+
+@import "layout/gallery";
+
+@import "layout/title-banner";
+
+@import "layout/about";
+
+@import "layout/team";
+
+@import "layout/sidebar";
+
+@import "layout/blog";
+
+@import "layout/blog-detail";
+
+@import "layout/restaurant";
+
+@import "layout/spa";
+
+@import "layout/contact";
+
+@import "layout/booking";
+
+@import "layout/error";
+
+@import "layout/coming-soon";
+
+
+
