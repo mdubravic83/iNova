@@ -1,0 +1,178 @@
+.testimonial{
+    position: relative;
+    margin-top: -6.40625vw;
+    z-index: 51;
+    .content{
+        background: $lightest-gray;
+        width: 100%;
+        position: relative;
+        z-index: 50;
+        border-radius: 3.125vw 0 0 3.125vw  ;
+
+        padding: 2.0833333333333335vw 0px;
+        .testimonial-slider{
+            margin: 0 -12px;
+            @include media-query(992px) {
+                margin: 0 -8px;
+            }
+            padding: 0 1.6666666666666667vw;
+            .slider-slide{
+                position: relative;
+                padding: 1.25vw;
+                border-radius: 1.5625vw;
+                background: $white;
+                margin: 0 12px;
+                @include media-query(992px) {
+                    margin: 0 8px;
+                }
+                @include media-query(768px) {
+                    border-radius: 2.604vw;
+                    padding: 2.083vw;
+                }
+                @include media-query(490px) {
+                    border-radius: 5.604vw;
+                    padding: 4.083vw;
+                }
+                p{
+                    @include media-query(490px) {
+                        font-size: 3.3vw;
+                    }
+                }
+                .user-detail{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.8333333333333334vw;
+                    @include media-query(490px) {
+                        gap: 2.833333vw;
+                    }
+                    
+                    img{
+                        width: 3.33335vw;
+                        height: 3.33335vw;
+                        @include media-query(490px) {
+                            width: 10.33335vw;
+                            height: 10.33335vw;
+                        }
+                    }
+                    .name{
+                        h6{
+                            @include media-query(490px) {
+                                font-size: 4vw;
+                            }
+                        }
+                        p{
+                            @include media-query(490px) {
+                                font-size: 3.5vw;
+                            }
+                        }
+                    }
+                }
+                .room{
+                    width: 100%;
+                    position: relative;
+                    border-radius: 0.78125vw ;
+                    overflow: hidden;
+                    @include media-query(768px) {
+                        border-radius: 2.604vw;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .info{
+                        position: absolute;
+                        left: 1.25vw;
+                        bottom: 1.25vw;
+                        right: 1.25vw;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: space-between;
+                        @include media-query(490px) {
+                            left: 3.25vw;
+                            bottom: 3.25vw;
+                            right: 3.25vw;
+                        }   
+                        .text{
+                            h6{
+                                @include media-query(490px) {
+                                    font-size: 4.5vw;
+                                }   
+                            }
+                            p{
+                                display: flex;
+                                align-items: center;
+                                gap: 12px;
+                                i{
+                                    font-size: 1.0416666666666667vw;
+                                    @include media-query(1024px) {
+                                        font-size: 1.172vw;
+                                    }
+                                }
+                            }
+                            span{
+                                i{
+                                    @include media-query(490px) {
+                                        font-size: 3.15vw;
+                                    }
+                                }
+                            }
+                        }
+                        a{
+                            width: 2.5vw;
+                            height: 2.5vw;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            border-radius: 1.5625vw;
+                            border: 1.25px solid $white;
+                            transition: $transition;
+                            @include media-query(768px) {
+                                width: 4.5vw;
+                                height: 4.5vw;
+                                border-radius: 4.5625vw;
+                            }
+                            @include media-query(490px) {
+                                width: 8.5vw;
+                                height: 8.5vw;
+                                border-radius: 8.5625vw;
+                            }
+                            
+                            svg{
+                                transition: $transition;
+                                width: 2.5vw;
+                                height: 2.5vw;
+                                @include media-query(768px) {
+                                    width: 4.5vw;
+                                    height: 4.5vw;
+                                }
+                                @include media-query(490px) {
+                                    width: 8.5vw;
+                                    height: 8.5vw;
+                                }
+                                path{
+                                  transition: $transition;
+                                }
+                            }
+                            &:hover{
+                                background: $black;
+                                border-color: $black;
+                                box-shadow: 0px 0px 20px 1px $black;
+                                svg{
+                                    path{
+                                      stroke: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.slick-prev, .slick-next{
+    display: none !important;
+}

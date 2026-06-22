@@ -1,0 +1,126 @@
+// =================== BLOG GRID =================== // 
+.blog-grid{
+    .blog-grid-wrapper{
+        background: $lightest-gray;
+        padding: 4.167vw 1.667vw;
+        border-radius: 3.125vw 3.125vw 0 0;
+        
+        .blog-block{
+            width: 30.312vw;
+            position: relative;
+            @include media-query(820px){
+                width: 100%;
+            }
+            .img-box{
+                img{
+                    border-radius: clamp(15px, 1.563vw, 40px) clamp(15px, 1.563vw, 40px) 0 0 ;
+                    width: 100%;
+                }
+            }
+            .text-box{
+                background: $white;
+                margin-top: -3.542vw;
+                border-radius: 0 0 clamp(15px, 1.563vw, 40px) clamp(15px, 1.563vw, 40px);
+                @include media-query(1399px){
+                    margin-top: -3.95vw;
+                }
+                @include media-query(490px){
+                    margin-top: -7.96vw;
+                }
+                @include media-query(430px){
+                    margin-top: -6.8vw;
+                }
+                @include media-query(399px){
+                    margin-top: -7.96vw;
+                }
+                .blog-vec{
+                    position: absolute;
+                    bottom: 14.01vw;
+                    z-index: 10;
+                    width: 30.312vw;
+                    height: 3.802vw;
+                    @include media-query(2560px){
+                        bottom: 13.8vw;
+                    }
+                    @include media-query(1920px){
+                        bottom: 14.01vw;
+                    }
+                    @include media-query(1399px){
+                        bottom: 13.92vw;
+                    }
+                    @include media-query(1299px){
+                        bottom: 14.2vw;
+                    }
+                    @include media-query(1199px){
+                        bottom: 14.46vw;
+                    }
+                    @include media-query(1024px){
+                        bottom: 17.17vw;
+                    }
+                    @include media-query(820px){
+                        bottom: 17.45vw;
+                        width: 46.312vw;
+                        height: 4.802vw;
+                    }
+                    @include media-query(768px){
+                        bottom: 17.84vw;
+                    }
+                    @include media-query(490px){
+                        bottom: 26.7vw;
+                        width: 100%;
+                        height: auto;
+                    }
+                    &.spa-vec{
+                        bottom: 10.8vw;
+                    }
+                }
+                .content{
+                    padding: 0 clamp(16px, 1.667vw, 40px) clamp(16px, 1.667vw, 40px);
+                    .date-title{
+                        display: flex;
+                        align-items: center;
+                        gap: clamp(8px, 0.833vw, 22px);
+                        padding: clamp(8px, 1.25vw, 32px) 0;
+                        position: relative;
+                        z-index: 15;
+                        h6{
+                            @include media-query(490px){
+                                font-size: 2.6vw;
+                            }
+                        }
+                    }
+                    h4{
+                        color: $light-black;
+                        transition: $transition;
+                        @include media-query(490px){
+                            font-size: 3.2vw;
+                        }
+                    }
+                    .blog-bottom-bar{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .author-detail{
+                            display: flex;
+                            align-items: center;
+                            gap: clamp(8px, 0.833vw, 22px);
+                            img{
+                                @include media-query(1024px){
+                                    width: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover{
+                .text-box{
+                    h4{
+                        color: $accent-1;
+                        transition: $transition;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,190 @@
+// =================== Room-Detail-Sidebar =================== // 
+.room-detail-sidebar {
+    padding: clamp(16px, 1.25vw, 32px);
+    background: $white;
+    border-radius: clamp(15px, 1.563vw, 40px);
+
+    .sidebar-title {
+        background: $lightest-gray;
+        padding: clamp(8px, 0.833vw, 22px);
+        border-radius: clamp(6px, 0.521vw, 15px);
+    }
+
+    .input-date-picker {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+        font-size: 1.09375vw;
+        font-weight: 500;
+
+        @include media-query(1024px) {
+            font-size: 1.563vw;
+        }
+
+        .date_from {
+            background: url(../media/icon/calender.png) no-repeat 97%;
+        }
+
+        .date_to {
+            background: url(../media/icon/calender.png) no-repeat 97%;
+        }
+    }
+
+    .nice-select {
+        color: $medium-gray;
+    }
+
+    .offer-block {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        border-radius: clamp(6px, 0.521vw, 15px);
+        border: 0.5px solid $medium-gray;
+        padding: clamp(8px, 0.833vw, 24px);
+
+        img {
+            border-radius: clamp(6px, 0.521vw, 15px);
+
+            @include media-query(490px) {
+                width: 80px;
+            }
+        }
+    }
+
+    .bold-text {
+        @include media-query(490px) {
+            font-size: 3.48vw;
+        }
+    }
+}
+
+
+// =================== Blog-Sidebar =================== // 
+.blog-sidebar {
+    padding: clamp(16px, 1.25vw, 32px);
+    background: $white;
+    border-radius: clamp(15px, 1.563vw, 40px);
+
+    form {
+        width: 100%;
+        position: relative;
+
+        input {
+            padding: clamp(10px, 1.068vw, 28px);
+            @include media-query(1024px) {
+                padding: 13.5px;
+            }
+        }
+        
+        button {
+            position: absolute;
+            right: 4px;
+            top: 4px;
+            padding: 4px;
+            border-radius: 10px;
+            width: clamp(36px, 2.917vw, 72px);
+            height: clamp(36px, 2.917vw, 72px);
+            
+            i {
+                font-size: clamp(18px, 1.667vw, 40px);
+            }
+        }
+    }
+
+    .sidebar-title {
+        background: $lightest-gray;
+        padding: clamp(8px, 0.833vw, 22px);
+        border-radius: clamp(6px, 0.521vw, 15px);
+        h4{
+            @include media-query(490px) {
+                font-size: 3vw;
+            }
+        }
+    }
+
+    // Category BLOCK
+    a {
+        display: block;
+
+        .category-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: clamp(6px, 0.521vw, 15px);
+            border: 0.5px solid $medium-gray;
+            padding: clamp(8px, 0.833vw, 24px);
+
+            h5 {
+                @include media-query(1024px) {
+                    font-size: 1.27vw;
+                }
+                @include media-query(490px) {
+                    font-size: 2.2vw;
+                }
+            }
+        }
+
+        &:hover {
+            color: $accent-1;
+        }
+    }
+
+    // POST BLOCK
+    .post-block {
+        display: flex;
+        align-items: center;
+        gap: clamp(8px, 1.25vw, 32px);
+        border-radius: clamp(6px, 0.521vw, 15px);
+        border: 0.5px solid $medium-gray;
+        padding: clamp(8px, 0.833vw, 24px);
+
+        img {
+            border-radius: clamp(6px, 0.521vw, 15px);
+
+            @include media-query(1024px) {
+                width: 70px;
+            }
+        }
+
+        h4 {
+            color: $light-black;
+            transition: $transition;
+
+            @include media-query(1024px) {
+                font-size: 1.4vw;
+            }
+            @include media-query(490px) {
+                font-size: 3.2vw;
+            }
+        }
+        
+        &:hover {
+            cursor: pointer;
+            
+            h4 {
+                transition: $transition;
+                color: $accent-1;
+            }
+        }
+    }
+    
+    .tags {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: clamp(8px, 0.833vw, 24px);
+
+        li {
+            a {
+                padding: clamp(6px, 0.625vw, 24px);
+                border-radius: clamp(6px, 0.521vw, 15px);
+                border: 0.5px solid $medium-gray;
+                line-height: normal;
+                @include media-query(490px) {
+                    font-size: 3.5vw;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+.activities {
+    position: relative;
+    margin-top: -6.40625vw;
+    z-index: 51;
+
+    .content {
+        background: $lightest-gray;
+        width: 100%;
+        position: relative;
+        z-index: 50;
+        padding: 2.0833333333333335vw 1.6666666666666667vw;
+        overflow: hidden;
+        border-radius: 0 3.125vw 3.125vw 0;
+
+        .row {
+            margin-left: -1.0416666666666667vw;
+            margin-right: -1.0416666666666667vw;
+        }
+
+        .row>[class*="col"] {
+            padding-left: 1.0416666666666667vw;
+            padding-right: 1.0416666666666667vw;
+        }
+
+        a {
+            .activitie-card {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 1.6666666666666667vw;
+                padding-right: 1.6666666666666667vw;
+                border-radius: 3.125vw;
+                background: $white;
+                position: relative;
+
+                @include media-query(490px) {
+                    margin-bottom: 8px;
+                    flex-direction: column;
+                }
+
+                .intersect {
+                    position: absolute;
+                    width: 2.0833333333333335vw;
+                    height: 100%;
+                    position: absolute;
+                    right: -2.0833333333333335vw;
+                    top: 0;
+                    display: flex;
+                    align-items: center;
+
+                    @include media-query(490px) {
+                        display: none;
+
+                    }
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                        height: a;
+                    }
+                }
+
+                &.right {
+                    padding-left: 1.6666666666666667vw;
+                    padding-right: 0;
+                }
+
+                .card-image {
+                    border-radius: 3.125vw;
+                    width: calc(50% - 0.8333333333333334vw);
+                    overflow: hidden;
+                    @include media-query(490px) {
+                        width: 100%;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 28.125vw;
+                        object-fit: cover;
+                        @include media-query(490px) {
+                            height: 70.125vw;
+                        }
+                    }
+                }
+
+                .card-content {
+                    width: calc(50% - 0.8333333333333334vw);
+                    text-align: center;
+                    @include media-query(490px) {
+                        width: calc(80% - 0.8333333333333334vw);
+                        padding-bottom: 8px;
+                    }
+                    .card-title {
+                        transition: $transition;
+                        color: $light-black;
+
+                        @include media-query(490px) {
+                            font-size: 4.5vw;
+                        }
+                    }
+
+                    p {
+                        @include media-query(490px) {
+                            font-size: 3.5vw;
+                            line-height: 140%;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                }
+
+                &.sec {
+                    padding: 3.3333333333333335vw 1.6666666666666667vw 1.6666666666666667vw;
+                    flex-direction: column;
+
+                    @include media-query(1024px) {
+                        padding: 3.125vw 2.93vw;
+                    }
+
+
+                    .card-image {
+                        border-radius: 0px;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        gap: 1.6666666666666667vw;
+                        
+                        img {
+                            width: calc(50% - 0.8333333333333334vw);
+                            height: auto;
+                            object-fit: cover;
+                            border-radius: 1.5625vw;
+
+                        }
+                    }
+
+                    .card-content {
+                        width: 100%;
+
+                        p {
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+                }
+
+                &:hover {
+                    .card-title {
+                        color: $accent-1;
+                        transition: $transition;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,164 @@
+.gallery {
+    margin-top: -6.40625vw;
+    position: relative;
+
+    &.gallery-detail {
+        margin-top: -1px;
+    }
+
+    .content {
+        background: $lightest-gray;
+        width: 100%;
+        position: relative;
+        z-index: 55;
+        padding: 2.0833333333333335vw 1.6666666666666667vw;
+        border-radius: 0 3.125vw 3.125vw 3.125vw;
+
+        &.gallery-content {
+            border-radius: 3.125vw 3.125vw 0 0;
+            padding: 4.167vw 1.6666666666666667vw 2.083vw;
+        }
+
+        .image-container {
+            width: 100%;
+            position: relative;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .imag-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 100;
+
+        }
+
+        .images {
+            display: flex;
+            align-items: center;
+            z-index: 50;
+            gap: 1.25vw;
+
+            &.background-shape {
+                position: absolute;
+                bottom: 4.167vw;
+                left: 1.667vw;
+                width: 30.521vw;
+                height: 9.115vw;
+                background: url(../media/vector-shape/room-gallery.png);
+                background-position: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: clamp(8px, 1.667vw, 48px) 0 0 clamp(4px, 0.833vw, 24px);
+
+            }
+
+            .gallery-img {
+                object-fit: cover;
+                border-radius: 0.78125vw;
+                transition: $transition;
+
+                img {
+                    border-radius: 0.78125vw;
+                    width: 5.885416666666667vw;
+                    height: 5.885416666666667vw;
+                    cursor: pointer;
+                    object-fit: cover;
+                    
+                }
+
+                &:hover {
+                    img {
+                        filter: drop-shadow(0px 0px 15px $accent-1);
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-shape {
+        position: absolute;
+        z-index: 50;
+        left: 0;
+        bottom: 0;
+
+        img {
+            object-fit: cover;
+            object-position: 100%;
+            width: 42.083vw;
+            height: 7.969vw;
+            margin: 0 auto;
+        }
+
+        &.center {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}
+
+// Gallery Page
+.image-gallery {
+
+    .gallery-block {
+        padding: 0 0.833vw;
+        @include media-query(490px){
+            margin: 0 clamp(6px, 1.633vw, 12px);
+        }
+        .image-block {
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                -webkit-transition: all 0.6s linear 0s;
+                transition: all 0.6s linear 0s;
+            }
+
+            .image-1 {
+                border-radius: clamp(20px, 3.125vw, 80px) 0 0 0;
+            }
+
+            .image-5 {
+                border-radius: 0 clamp(20px, 3.125vw, 80px) 0 0;
+                @include media-query(490px){
+                    border-radius: 0;
+                }
+            }
+            .image-3{
+                @include media-query(490px){
+                    border-radius: 0 clamp(20px, 3.125vw, 80px) 0 0;
+                }
+            }
+
+            &:hover {
+                .image-block {
+                    img {
+                        -webkit-transform: scale(1.1);
+                        transform: scale(1.1);
+                        -webkit-transition: all 0.6s linear 0s;
+                        transition: all 0.6s linear 0s;
+                    }
+                }
+            }
+        }
+    }
+
+    // ===================  BOOTSTRAP IMAGE-GALLERY TABS =================== // 
+    .tab-content {
+        .tab-pane {
+            &.show {
+                transition: opacity 1s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            }
+        }
+    }
+}

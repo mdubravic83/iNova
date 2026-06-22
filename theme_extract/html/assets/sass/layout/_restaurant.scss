@@ -1,0 +1,114 @@
+.restaurant-sec {
+    .restaurant-wrapper {
+        background: $lightest-gray;
+        padding: 4.167vw 1.667vw;
+
+        @include media-query(768px) {
+            padding: 4.167vw;
+        }
+
+        .sec-heading {
+            p {
+                @include media-query(768px) {
+                    font-size: 1.977vw;
+                }
+            }
+
+            h2 {
+                @include media-query(768px) {
+                    font-size: 4.516vw;
+                }
+            }
+        }
+
+        .item-card {
+            .image-box {
+                position: relative;
+
+                img {
+                    border-radius: 30px;
+                    width: 100%;
+                }
+
+                .item-name {
+                    width: 13.542vw;
+                    height: 5.521vw;
+                    background: url(../media/vector-shape/restaurant-vec.png);
+                    background-position: 100%;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    padding: 2.5vw 0 0 2.5vw;
+                    @include media-query(820px){
+                        width: 22.542vw;
+                        height: 9.521vw;
+                        padding: 4.5vw 0 0 4.5vw;
+                    }
+                    @include media-query(490px){
+                        width: 49.542vw;
+                        height: 20.521vw;
+                        padding: 10.5vw 0 0 10.5vw;
+                    }
+                    h4{
+                        @include media-query(490px){
+                            font-size: 4.2vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .shape-images {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: -1px;
+
+        img {
+            width: 33.802vw;
+            height: 7.969vw;
+        }
+    }
+}
+
+
+
+.restaurant-menu{
+    .menu-wrapper{
+        background: $lightest-gray;
+        padding: 4.167vw 1.667vw;
+        .menu-card{
+            display: flex;
+            align-items: center;
+            gap: clamp(8px, 0.833vw, 24px);
+            border-radius: 0.781vw;
+            background: $white;
+            .image-box{
+                position: relative;
+                img{
+                    &:first-child{
+                        border-radius: 0.781vw 0 0 0.781vw;
+                    }
+                    &:last-child{
+                        position: absolute;
+                        right: 0;
+                        width: auto;
+                        height: -webkit-fill-available;
+                    }
+                }
+            }
+            .text-box{
+                padding-right: clamp(8px, 0.833vw, 24px);
+                h4{
+                    @include media-query(490px){
+                        font-size: 3vw;
+                    }
+                }
+            }
+        }
+    }
+}

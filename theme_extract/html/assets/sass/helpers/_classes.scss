@@ -1,0 +1,312 @@
+// Heading
+.h-111{
+  font-family: $font-primary;
+  font-size:  5.78125vw;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.11562502vw;
+
+  @media (max-width: 1024px){
+    font-size: 5.95703125vw;
+    letter-spacing: -0.119140625vw;
+  }
+}
+.h-69{
+  font-family: $font-primary;
+  font-size:  3.59375vw;
+  font-weight: 600;
+  line-height: 120%; /* 126px */
+  letter-spacing: 0.0359375vw;
+  
+  @include media-query(1024px) {
+    font-size: 3.516vw;
+    letter-spacing: 0.035vw;
+  }
+}
+
+.h-56 {
+  font-family: $font-primary;
+  font-size: 2.9166666666666665vw;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.05833333333333334vw;
+
+  @include media-query(1024px) {
+    font-size: 2.93vw;
+    letter-spacing: -0.029vw;
+  }
+  &.bold {
+    font-weight: 700;
+  }
+
+  
+}
+.h-53 {
+  font-family: $font-primary;
+  font-size: 2.7604166666666665vw;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 120%;
+  letter-spacing: -0.027604166666666666vw;
+  @include media-query(1024px) {
+    font-size: 2.93vw;
+    letter-spacing: -0.029vw;
+  }
+  @include media-query(490px) {
+    font-size: 3.93vw;
+  }
+  &.bold {
+    font-weight: 700;
+  }
+
+}
+.h-40{
+  font-family: $font-primary;
+  font-size: 2.0833333333333335vw;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.041666666666666664vw;
+
+  &.bold {
+    font-weight: 700;
+  }
+  @include media-query(1024px) {
+    font-size: 2.148vw;
+    letter-spacing: -0.043vw;
+  }
+  @include media-query(490px) {
+    font-size: 4.148vw;
+  }
+}
+
+.h-31 {
+  font-family: $font-primary;
+  font-size: 1.6145833333333333vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 43.2px */
+  letter-spacing: -0.032vw;
+  
+  &.bold {
+    font-weight: 700;
+  }
+  @include media-query(1024px) {
+    font-size: 1.563vw;
+    letter-spacing: -0.031vw;
+  }
+  @include media-query(820px) {
+    font-size: 2.3vw;
+  }
+  @include media-query(490px) {
+    font-size: 3.5vw;
+  }
+  
+}
+.h-24 {
+  font-family: $font-primary;
+  font-size: 1.25vw;
+  font-weight: 600;
+  line-height: 140%; /* 43.2px */
+  letter-spacing: -0.025vw;
+
+  &.bold {
+    font-weight: 700;
+  }
+  @include media-query(1024px) {
+    font-size: 2.27vw;
+    letter-spacing: -0.025vw;
+  }
+  @include media-query(768px) {
+    font-size: 2.2vw;
+  }
+  @include media-query(490px) {
+    font-size: 3.2vw;
+  }
+}
+
+.h-18 {
+  font-family: $font-sec;
+  font-size: 0.9375vw;
+  font-weight: 400;
+  line-height: 140%;
+
+  @include media-query(1024px) {
+    font-size: 1.27vw;
+  }
+  @include media-query(490px) {
+    font-size: 3vw;
+  }
+  
+  &.bold {
+    font-weight: 500;
+    line-height: 120%;
+    @include media-query(1024px) {
+      font-size: 0.977vw;
+    }
+    @include media-query(768px) {
+      font-size: 1.97vw;
+    }
+    
+  }
+}
+
+.h-16 {
+  font-family: $font-sec;
+  font-size: 0.833vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  @include media-query(1024px) {
+    font-size: 1.25vw;
+  }
+  @include media-query(768px) {
+    font-size: 1.5vw;
+  }
+  @include media-query(490px) {
+    font-size: 2.5vw;
+  }
+  
+}
+
+// Colors
+.color-primary {
+  color: $accent-1 !important;
+}
+.color-sec {
+  color: $accent-2 !important;
+}
+.black {
+  color: $black !important;
+}
+.matt-black{
+  color: $matt-black !important;
+}
+.medium-black{
+  color: $medium-black;
+}
+.light-black {
+  color: $light-black !important;
+}
+
+.white {
+  color: $white !important;
+}
+.light-white {
+  color: $light-white !important;
+}
+
+.lightest-gray {
+  color: $medium-gray !important;
+}
+.light-gray {
+  color: $medium-gray !important;
+}
+.dark-gray {
+  color: $dark-gray!important;
+}
+
+.bg-primary {
+  background-color: $accent-1 !important;
+}
+.bg-sec {
+  background-color: $accent-2 !important;
+}
+.bg-black {
+  background-color: $black !important;
+}
+.bg-light-black {
+  background-color: $light-black !important;
+}
+
+.bg-lightest-gray {
+  background-color: $medium-gray !important;
+}
+.bg-light-gray {
+  background-color: $medium-gray !important;
+}
+
+
+// Font-Family
+.font-primary{
+  font-family: $font-primary;
+}
+.font-sec{
+  font-family: $font-sec;
+}
+
+// Radius
+.br-30 {
+  border-radius: 30px;
+  @include media-query (992px) {
+    border-radius: 20px;
+  }
+  @include media-query (768px) {
+    border-radius: 15px;
+  }
+
+}
+.br-30-0{
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
+  @include media-query (992px) {
+    border-radius: 20px 20px 0 0;
+  }
+  @include media-query (768px) {
+    border-radius: 15px 15px 0 0;
+  }
+
+}
+.br-25 {
+  border-radius: 25px;
+}
+.br-20 {
+  border-radius: 20px;
+}
+.br-15 {
+  border-radius: 15px;
+}
+.br-10 {
+  border-radius: 10px;
+}
+.br-5 {
+  border-radius: 5px;
+}
+.br-0 {
+  border-radius: 0;
+}
+// Box Shadow classes
+
+.shadow {
+  box-shadow: $shadow !important;
+}
+.light-bold{
+  font-weight: 500;
+  line-height: 120%;
+  @include media-query(1024px) {
+    font-size: 0.977vw;
+  }
+}
+
+
+// ------------- Font Weight -------------- //
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
+}
+
+// Mix helper classes
+.b-unstyle {
+  border: 0;
+  background: transparent;
+}

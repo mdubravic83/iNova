@@ -1,0 +1,131 @@
+// =================== SPA SERVICE =================== // 
+.spa-service{
+    .spa-service-wrapper{
+        padding: 4.167vw 1.667vw;
+        background: $lightest-gray;
+        border-radius: 2.5vw 2.5vw 0 0;
+        .spa-image-block{
+            position: relative;
+            img{
+                &:first-child{
+                    border-radius: 3.125vw 3.125vw 0 3.125vw;
+                    width: 100%;
+                }
+                &:last-child{
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 15.937vw;
+                    height: 10.26vw;
+                }
+            }
+        }
+        .spa-content-block{
+            background: $white;
+            padding: 9.635vw 1.667vw;
+            height: 36.458vw;
+            position: relative;
+            border-radius: 3.125vw 3.125vw 3.125vw 0;
+            @include media-query(490px){
+                height: auto;
+                margin-top: 16px;
+                border-radius: 3.125vw  0 3.125vw 3.125vw;
+                padding: 5.635vw 1.667vw;
+            }
+            h3{
+                
+                @include media-query(490px){
+                    font-size: 4vw;
+                }
+            }
+            h5{
+                
+                @include media-query(490px){
+                    font-size: 4vw;
+                }
+            }
+            img{
+                position: absolute;
+                bottom: 0;
+                left: -12.78vw;
+                width: 12.812vw;
+                height: 8.532vw;
+                @include media-query(490px){
+                    left: unset;
+                    bottom: unset;
+                    right: 0;
+                    top: -39px;
+                    width: 13.812vw;
+                    height: 18.532vw;
+                }
+                @include media-query(430px){
+                    top: -42px;
+                }
+                @include media-query(399px){
+                    top: -39px;
+                }
+            }
+        }
+    }
+}
+
+
+// =================== SPA OFFER =================== // 
+.spa-offer{
+    .spa-offer-wrapper{
+        background: $lightest-gray;
+        padding: 4.167vw 1.667vw;
+        .spa-block{
+            background-color: $white;
+            border-radius: clamp(15px, 1.563vw, 40px);
+            margin-bottom: 24px;
+            @include media-query(490px){
+                margin-bottom: 6.531vw;
+            }
+            .image-box{
+                position: relative;
+                img{
+                    &:first-child{
+                        border-radius: clamp(15px, 1.563vw, 40px)  clamp(15px, 1.563vw, 40px) 0 0;
+                        width: 100%;
+                    }
+                    &:last-child{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+            }
+            .text-box{
+                border-radius: 0 0 clamp(15px, 1.563vw, 40px)  clamp(15px, 1.563vw, 40px);
+                padding: clamp(16px, 1.667vw, 48px);
+                margin-top: -3.958vw;
+                position: relative;
+                @include media-query(490px){
+                    margin-top: -9.958vw;
+                }
+                h4{
+                    color: $light-black;
+                    transition: $transition;
+                    @include media-query(490px){
+                        font-size: 3.5vw;
+                    }
+                }
+                h5{
+                    @include media-query(490px){
+                        font-size: 4.2vw;
+                    }
+                }
+            }
+            &:hover{
+                .text-box{
+                    h4{
+                        color: $accent-1;
+                        transition: $transition;
+                    }
+                }
+            }
+        }
+    }
+}

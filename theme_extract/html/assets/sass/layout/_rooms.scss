@@ -1,0 +1,1009 @@
+// =================== ROOMS SLIDERS =================== // 
+
+.rooms {
+    position: relative;
+    z-index: 50;
+
+    .content {
+        background: $lightest-gray;
+        width: 100%;
+        position: relative;
+        z-index: 50;
+        padding: 2.083vw 1.6666666666666667vw;
+        border-radius: 3.125vw 3.125vw 0 3.125vw;
+
+        &.content_room_page {
+            padding: 4.167vw 1.667vw;
+            border-radius: 3.125vw 3.125vw 0 0;
+        }
+
+        &.room-detail-bottom {
+            border-radius: 0;
+            padding: 4.167vw 1.667vw;
+        }
+
+        .card-block {
+            width: 100%;
+            scrollbar-width: none;
+
+            @include media-query(1025px) {
+                overflow-y: scroll;
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .cards {
+                display: inline-flex;
+                gap: 1.25vw;
+
+                @include media-query(490px) {
+                    gap: 3.265vw;
+                }
+
+                .card-item {
+                    width: 22.395833333333332vw;
+                    border-radius: 1.5625vw;
+                    padding: 1.6666666666666667vw 1.25vw;
+                    background: $white;
+                    overflow: hidden;
+                    position: relative;
+
+
+                    @include media-query(1025px) {
+                        width: 26.953vw;
+                        padding: 2.344vw 1.563vw;
+                        border-radius: 1.953vw;
+                    }
+
+                    @include media-query(768px) {
+                        width: 38.953vw;
+                    }
+
+                    @include media-query(490px) {
+                        width: 73.061vw;
+                        padding: 4.898vw 3.265vw;
+                        border-radius: 5.953vw;
+
+                    }
+
+                    &.room-page-card {
+                        width: 100%;
+                    }
+
+                    .card-image {
+                        position: relative;
+                        overflow: hidden;
+
+                        .card-price {
+                            width: 8.4375vw;
+                            height: 5.260416666666667vw;
+                            background: url(../media/vector-shape/top-shape.png);
+                            background-position: 100%;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            padding: 0.4166666666666667vw 0 0 0;
+                            z-index: 10;
+
+                            @include media-query(768px) {
+                                width: 13.4375vw;
+                                height: 8.260417vw;
+                                background-position: top;
+                            }
+
+                            @include media-query(490px) {
+                                width: 27.469vw;
+                                height: 14.184vw;
+                                background-position: top;
+                            }
+
+                            p {
+                                display: flex;
+                                align-items: center;
+
+                                span {
+                                    &:first-child {
+                                        @include media-query(768px) {
+                                            font-size: 2.563vw;
+                                        }
+
+                                        @include media-query(490px) {
+                                            font-size: 5.102vw;
+                                        }
+                                    }
+
+                                    &:last-child {
+                                        @include media-query(768px) {
+                                            font-size: 1.5vw;
+                                        }
+
+                                        @include media-query(490px) {
+                                            font-size: 3.265vw;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .corner-shape {
+                            transform: scale3d(0, 0, 1);
+                            transform-style: preserve-3d;
+                            position: absolute;
+                            width: 5vw;
+                            height: 5vw;
+                            right: -50px;
+                            bottom: -50px;
+                            z-index: 100;
+                            transition: all 0.5s ease-in-out;
+
+                            @include media-query(768px) {
+                                right: 0px;
+                                bottom: 0px;
+                            }
+
+                            @include media-query(490px) {
+                                width: 15vw;
+                                height: 14vw;
+                                right: -2px;
+                                bottom: -2px;
+                            }
+                        }
+
+                        .icon {
+                            position: absolute;
+                            right: -50px;
+                            bottom: -50px;
+                            width: 2.9166666666666665vw;
+                            height: 2.9166666666666665vw;
+                            z-index: 250;
+                            transform: scale3d(0, 0, 1);
+                            transition: all 0.5s ease-in-out;
+
+                            @include media-query(490px) {
+                                width: 7.916667vw;
+                                height: 7.916667vw;
+                                right: 3px;
+                                bottom: 0px;
+                            }
+                        }
+
+                        .card-image {
+                            width: 100%;
+                            border-radius: 1.5625vw;
+
+                            @include media-query(490px) {
+                                border-radius: 5.102vw;
+                            }
+                        }
+                    }
+
+                    .text-block {
+                        .name-rating {
+                            h4 {
+                                transition: $transition;
+                                color: $matt-black;
+
+                                @include media-query (490px) {
+                                    font-size: 5.102vw;
+                                }
+                            }
+
+                            .rating {
+                                p {
+                                    @include media-query (768px) {
+                                        font-size: 1.8vw;
+                                    }
+
+                                    @include media-query (490px) {
+                                        font-size: 4.265vw;
+                                    }
+                                }
+                            }
+                        }
+
+                        .sample-text {
+                            @include media-query (490px) {
+                                font-size: 3.5vw;
+                                line-height: 140%;
+                            }
+                        }
+
+                        .services {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.8333333333333334vw;
+
+                            @include media-query(768px) {
+                                gap: 2.2vw;
+                            }
+
+                            @include media-query(490px) {
+                                gap: 3.5vw;
+                            }
+
+                            li {
+                                display: flex;
+                                align-items: center;
+                                gap: 0.4166666666666667vw;
+
+                                @include media-query(768px) {
+                                    gap: 1vw;
+                                }
+
+                                img {
+                                    width: 16px;
+                                    height: 16px;
+                                    object-fit: cover;
+                                }
+
+                                p {
+                                    overflow: hidden;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 1;
+                                    line-clamp: 1;
+                                    -webkit-box-orient: block-axis;
+                                    font-size: clamp(14px, 0.83vw, 40px);
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .card-image {
+                            .corner-shape {
+                                transform: scale3d(1, 1, 1);
+                                right: -2px;
+                                bottom: -2px;
+                            }
+
+                            .icon {
+                                transform: scale3d(1, 1, 1);
+                                right: 1px;
+                                bottom: 1px;
+                            }
+                        }
+
+                        .text-block {
+                            .name-rating {
+                                h4 {
+                                    color: $accent-1;
+                                    transition: $transition;
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .btn-block {
+        width: 31.354vw;
+        margin-left: auto;
+        padding: 1.563vw 1.667vw 1.563vw 0;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-top: -1px;
+        background: url(../media/bg-shape/right-corner-shape.png);
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include media-query(490px) {
+            width: 45.354vw;
+            padding: 1.563vw 1.667vw 1.563vw 0;
+        }
+
+        .cus-btn {
+            &.dark {
+                padding: 1.5104166666666667vw 7.083333333333333vw;
+                background: $black;
+
+                samp {
+                    font-family: $font-primary;
+                    font-size: clamp(12px, 1.25vw, 16px);
+                    font-weight: 400;
+                    line-height: 150%;
+
+                    @include media-query(1024px) {
+                        // font-size: clamp(12px, 1.27vw, 16px);
+                        letter-spacing: -0.025vw;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+
+    // Room Grid Page
+    .nav {
+        display: flex;
+        justify-content: center;
+        gap: clamp(16px, 2.5vw, 56px);
+        border: 0px;
+
+        @include media-query(490px) {
+            row-gap: 8px;
+            padding-top: 2.449vw;
+        }
+
+        .nav-item {
+            .nav-link {
+                position: relative;
+                color: $light-black;
+                font-family: $font-primary;
+                font-size: clamp(14px, 1.25vw, 28px);
+                font-weight: 400;
+                line-height: 150%;
+                border: 0px;
+                padding: 0px;
+                padding: 0.417vw 0.833vw;
+                border-radius: 0.521vw;
+                display: flex;
+                align-items: center;
+                gap: 0.313vw;
+                transition: $transition;
+                z-index: 200;
+                color: $light-black;
+                cursor: pointer;
+
+                &::before {
+                    content: '';
+                    width: clamp(4px, 0.417vw, 12px);
+                    height: clamp(4px, 0.417vw, 12px);
+                    background: transparent;
+                    border-radius: clamp(4px, 0.417vw, 12px);
+                    margin-bottom: clamp(1px, 0.208vw, 6px);
+                    transition: $transition;
+
+                }
+
+
+                &:hover {
+                    background: linear-gradient(90deg, rgba(34, 157, 254, 0.04) 0%, rgba(0, 143, 255, 0.06) 100%);
+
+                    &::before {
+                        background: $accent-1;
+                    }
+                }
+
+                &.active {
+                    background: linear-gradient(90deg, rgba(34, 157, 254, 0.04) 0%, rgba(0, 143, 255, 0.06) 100%);
+                    color: $light-black;
+
+                    &::before {
+                        background-color: $accent-1;
+                    }
+                }
+            }
+        }
+    }
+
+    // ===================  BOOTSTRAP ROOMS TAB =================== // 
+    .tab-content {
+        .tab-pane {
+            &.show {
+                transition: opacity 1s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            }
+        }
+    }
+}
+
+// =================== ROOMS SUITES =================== // 
+
+.suite-room {
+    margin-top: -6.40625vw;
+    position: relative;
+    z-index: 50;
+    @include media-query(490px) {
+        margin-top: -10.40625vw;
+    }
+    &.room-list {
+        margin-top: 0;
+    }
+
+    .content {
+        border-radius: 3.125vw 0 0 3.125vw;
+        background: $lightest-gray;
+        width: 100%;
+        position: relative;
+        z-index: 50;
+        padding: 2.0833333333333335vw 0;
+
+        &.v-2 {
+            border-radius: 3.125vw 0 0 0;
+        }
+
+        &.offer-wrapper {
+            padding: 4.167vw 0;
+            border-radius: 3.125vw 0 0 0;
+        }
+
+        // =================== ROOMS SUITES SLIDER HOME PAGE =================== // 
+        .room-slider {
+            width: 100%;
+            padding-left: 1.6666666666666667vw;
+
+
+            .slide {
+                width: 100%;
+                position: relative;
+
+                @include media-query(490px) {
+                    margin-bottom: 18%;
+                }
+
+                .slide__img {
+                    width: 57.7vw;
+                    border-radius: 1.5625vw;
+                    overflow: hidden;
+                    position: relative;
+
+                    @include media-query(490px) {
+                        border-radius: 4.082vw 4.082vw 0 0;
+                    }
+
+                    .side_vector {
+                        position: absolute;
+                        left: 79.8%;
+                        top: -3px;
+                        width: 11.823vw;
+                        height: 32.5vw;
+
+                        @include media-query (1024px) {
+                            left: 79.8%;
+                            top: -21px;
+                            width: 11.823vw;
+                            height: 36.5vw;
+                        }
+
+                        @include media-query (820px) {
+                            top: -18px;
+                        }
+
+                        @include media-query (768px) {
+                            left: 80.5%;
+                            width: 11.823vw;
+                            height: 37.5vw;
+                            top: -20px;
+                        }
+                    }
+
+                    .side_vector_mobile {
+
+                        @include media-query (490px) {
+                            position: absolute;
+                            top: 154px;
+                            width: 96.224vw;
+                            height: 13.061vw;
+                        }
+
+                        @include media-query (430px) {
+                            top: 168px;
+                        }
+
+                        @include media-query (399px) {
+                            top: 154px;
+                        }
+                    }
+
+                    @include media-query (490px) {
+                        width: 93.375vw;
+
+                    }
+
+                    .room_image {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+
+                    }
+                }
+
+                .slide__content {
+                    position: absolute;
+                    right: 2.2395833333333335vw;
+                    top: 0px;
+                    width: 45.26vw;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    @include media-query (490px) {
+                        right: 9.239583vw;
+                        top: 61.239583vw;
+                        width: 78.163vw;
+                        margin-top: -15.99vw;
+
+                    }
+
+                    .content-block {
+                        width: 100%;
+                        border-radius: 1.5625vw;
+                        background: $white;
+                        padding: 1.6666666666666667vw;
+                        box-shadow: 0px 0px 64px 0px rgba(0, 0, 0, 0.25);
+
+                        @include media-query(1024px) {
+                            box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.25);
+                        }
+
+                        @include media-query(490px) {
+                            padding: 4.898vw 3.265vw;
+                            border-radius: 4.082vw;
+                            box-shadow: none;
+
+                        }
+
+                        h2 {
+                            @include media-query(490px) {
+                                font-size: 4.959vw;
+                            }
+
+                        }
+                    }
+
+                    .price-rating {
+                        display: flex;
+                        align-items: flex-end;
+                        gap: 0.8333333333333334vw;
+
+                        @include media-query(490px) {
+                            align-items: baseline;
+                            gap: 3.833333vw;
+                        }
+
+                        p {
+                            span {
+                                &:first-child {
+                                    @include media-query(490px) {
+                                        font-size: 4.327vw;
+                                    }
+                                }
+
+                                &:last-child {
+                                    @include media-query(490px) {
+                                        font-size: 3.265vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .reviews-text {
+                        @include media-query(490px) {
+                            font-size: 3.265vw;
+                            line-height: 140%;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+
+                    .services {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.8333333333333334vw;
+
+                        @include media-query(490px) {
+                            gap: 3.2vw;
+                        }
+
+
+                        li {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.4166666666666667vw;
+
+                            img {
+                                width: 16px;
+                                height: 16px;
+                                object-fit: cover;
+                            }
+
+                            p {
+                                @include media-query(490px) {
+                                    font-size: 3vw;
+                                }
+                            }
+                        }
+                    }
+
+                    .cus-btn {
+                        padding: 0.8854166666666666vw 4.53125vw;
+
+                        @include media-query (490px) {
+                            border-radius: 6.122vw;
+                            padding: 2.449vw 4.898vw;
+                        }
+                    }
+                }
+            }
+        }
+
+        // =================== ROOMS SUITES SLIDER HOME PAGE =================== // 
+
+
+        // =================== ROOMS SUITES LIST =================== // 
+        .room-suites-list {
+            width: 100%;
+            padding: 0 1.6666666666666667vw;
+
+            .slick-slide {
+                @include media-query (490px) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-left: -4px;
+                }
+            }
+
+            .slide-list {
+                width: 100%;
+                position: relative;
+
+                @include media-query(490px) {
+                    margin-bottom: 63%;
+                }
+
+                // margin-bottom: 6.667vw;
+                &.list-reverse {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: flex-start
+                }
+
+                .slide__img {
+                    width: 57.7vw;
+                    border-radius: 1.5625vw;
+                    overflow: hidden;
+                    position: relative;
+
+                    @include media-query(1024px) {
+                        height: 42vw;
+                    }
+
+                    @include media-query(490px) {
+                        border-radius: 4.082vw 4.082vw 0 0;
+                        width: 93.375vw;
+                        height: 100%;
+                    }
+
+                    .side_vector {
+                        position: absolute;
+                        left: 79.8%;
+                        top: -3px;
+                        width: 11.823vw;
+                        height: 32.5vw;
+
+                        @include media-query (1024px) {
+                            height: 42.3vw;
+                            top: -1px;
+                        }
+
+                        &.reverse-vector {
+                            left: -1px;
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                    .side_vector_mobile {
+                        @include media-query (490px) {
+                            position: absolute;
+                            top: 154px;
+                            width: 96.224vw;
+                            height: 13.061vw;
+                        }
+
+                        @include media-query (430px) {
+                            top: 169px;
+                        }
+
+                        @include media-query (399px) {
+                            top: 154px;
+                        }
+                    }
+
+                    @include media-query (490px) {
+                        width: 93.375vw;
+                    }
+
+                    .room_image {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+
+                    }
+                }
+
+                .slide__content {
+                    position: absolute;
+                    right: 0;
+                    top: 0px;
+                    width: 45.26vw;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    @include media-query (490px) {
+                        right: 6.239583vw;
+                        top: 55.239583vw;
+                        width: 87%;
+                        margin-top: -8.531vw;
+
+                    }
+
+                    &.reverse-content {
+                        left: 0;
+                        top: 0px;
+
+                        @include media-query(490px) {
+                            right: 6.239583vw;
+                            top: 55.239583vw;
+                            left: unset;
+                        }
+                    }
+
+                    .content-block {
+                        width: 100%;
+                        border-radius: 1.5625vw;
+                        background: $white;
+                        padding: 1.6666666666666667vw;
+                        box-shadow: 0px 0px 64px 0px rgba(0, 0, 0, 0.25);
+
+                        @include media-query(1024px) {
+                            box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.25);
+                        }
+
+                        @include media-query(490px) {
+                            padding: 4.898vw 3.265vw;
+                            border-radius: 4.082vw;
+                            box-shadow: none;
+
+                        }
+
+                        h2 {
+                            @include media-query(490px) {
+                                font-size: 4.959vw;
+                            }
+                        }
+                    }
+
+                    .price-rating {
+                        display: flex;
+                        align-items: flex-end;
+                        gap: 0.8333333333333334vw;
+
+                        @include media-query(490px) {
+                            align-items: baseline;
+                            gap: 3.833333vw;
+                        }
+
+                        p {
+                            span {
+                                &:first-child {
+                                    @include media-query(490px) {
+                                        font-size: 4.327vw;
+                                    }
+                                }
+
+                                &:last-child {
+                                    @include media-query(490px) {
+                                        font-size: 3.265vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .reviews-text {
+                        @include media-query(490px) {
+                            font-size: 3.2vw;
+                            line-height: 140%;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+
+                    .services {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.8333333333333334vw;
+
+                        @include media-query(490px) {
+                            gap: 3.2vw;
+                        }
+
+
+                        li {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.4166666666666667vw;
+
+                            img {
+                                width: 16px;
+                                height: 16px;
+                                object-fit: cover;
+                            }
+
+                            p {
+                                @include media-query(490px) {
+                                    font-size: 3.5vw;
+                                }
+                            }
+                        }
+                    }
+
+                    .cus-btn {
+                        padding: 0.8854166666666666vw 4.53125vw;
+
+                        @include media-query (490px) {
+                            border-radius: 6.122vw;
+                            padding: 2.449vw 4.898vw;
+                        }
+                    }
+                }
+            }
+        }
+
+        // =================== ROOMS SUITES LIST =================== // 
+
+    }
+
+    // Room Grid Page
+    .nav {
+        display: flex;
+        justify-content: center;
+        gap: clamp(16px, 2.5vw, 56px);
+        border: 0px;
+
+        @include media-query(490px) {
+            row-gap: 8px;
+            padding-top: 2.449vw;
+        }
+
+        .nav-item {
+            .nav-link {
+                position: relative;
+                color: $light-black;
+                font-family: $font-primary;
+                font-size: clamp(14px, 1.25vw, 28px);
+                font-weight: 400;
+                line-height: 150%;
+                border: 0px;
+                padding: 0px;
+                padding: 0.417vw 0.833vw;
+                border-radius: 0.521vw;
+                display: flex;
+                align-items: center;
+                gap: 0.313vw;
+                transition: $transition;
+                z-index: 200;
+                color: $light-black;
+                cursor: pointer;
+
+                @include media-query(490px) {
+                    font-weight: 500;
+                }
+
+                &::before {
+                    content: '';
+                    width: clamp(4px, 0.417vw, 12px);
+                    height: clamp(4px, 0.417vw, 12px);
+                    background: transparent;
+                    border-radius: clamp(4px, 0.417vw, 12px);
+                    margin-bottom: clamp(1px, 0.208vw, 6px);
+                    transition: $transition;
+
+                }
+
+
+                &:hover {
+                    background: linear-gradient(90deg, rgba(34, 157, 254, 0.04) 0%, rgba(0, 143, 255, 0.06) 100%);
+
+                    &::before {
+                        background: $accent-1;
+                    }
+                }
+
+                &.active {
+                    background: linear-gradient(90deg, rgba(34, 157, 254, 0.04) 0%, rgba(0, 143, 255, 0.06) 100%);
+                    color: $light-black;
+
+                    &::before {
+                        background-color: $accent-1;
+                    }
+                }
+            }
+        }
+    }
+
+    // ===================  BOOTSTRAP ROOMS TAB =================== // 
+    .tab-content {
+        .tab-pane {
+            &.show {
+                transition: opacity 1s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            }
+        }
+    }
+
+}
+
+.bottom-shape {
+    width: 31.354vw;
+    height: 7.969vw;
+    margin-top: -1px;
+    margin-left: auto;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        object-position: 100%;
+    }
+
+    &.center {
+        width: 42.083vw;
+        height: 7.969vw;
+        margin: 0 auto;
+    }
+}
+
+
+// =================== ROOMS PAGE =================== //
+.room-bottom-shapes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .shape-right {
+        width: 33.965vw;
+        height: 7.969vw;
+        margin-top: -1px;
+        background: url(../media/vector-shape/body-right.png);
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .shape-left {
+        width: 33.965vw;
+        height: 7.969vw;
+        margin-top: -1px;
+        background: url(../media/vector-shape/body-left.png);
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background: $lightest-gray;
+    margin: 0.8333333333333334vw 0;
+
+    @include media-query(1024px) {
+        margin: 1.172vw 0;
+    }
+
+    @include media-query(490px) {
+        margin: 3.265vw 0;
+    }
+}

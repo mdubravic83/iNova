@@ -1,0 +1,87 @@
+
+.team-sec{
+    .team-wrapper{
+        background: $lightest-gray;
+        padding: 80px 32px;
+        @include media-query(768px){
+            padding: 4.167vw;
+        }
+        .sec-heading{
+            p{
+                @include media-query(768px){
+                    font-size: 1.977vw;
+                }
+            }
+            h2{
+                @include media-query(768px){
+                    font-size: 4.516vw;
+                }
+            }
+        }
+        .team-slider{
+            margin: 0 -1.01vw;
+            
+            .team-card{
+                margin: 0 1.01vw;
+                .image-box{
+                    position: relative;
+                    .member-name{
+                        h4{
+                            @include media-query(768px){
+                                font-size: 2.563vw;
+                            }
+                            @include media-query(490px){
+                                font-size: 4vw;
+                            }
+                        }
+                        h5{
+                            @include media-query(768px){
+                                font-size: 1.7vw;
+                            }
+                            @include media-query(490px){
+                                font-size: 2.7vw;
+                            }
+                        }
+                    }
+                    img{
+                        border-radius: 30px;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    .member-name{
+                        width: 15.909vw;
+                        height: 7.475vw;
+                        background: url(../media/vector-shape/team-cornor.png);
+                        background-position: 100%;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        padding: 2.424vw;
+                        @include media-query(768px){
+                            width: 23.909vw;
+                            height: 11.475vw;
+                            padding: 3.424vw;
+                        }
+                        @include media-query(490px){
+                            width: 41.909vw;
+                            height: 19.475vw;
+                            padding: 7.424vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.shape-images{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -1px;
+    img{
+        width: 33.802vw;
+        height: 7.969vw;
+    }
+}
